@@ -5,18 +5,19 @@ using namespace std;
 int main()
 {
     srand((unsigned)time(0));       //define random range 
-    int tab[20];                    //define array (tab) with 20 index
+        int max = 20;                   //array size
+    int *tab = new int[max];                    //define array (tab) with 20 index
         
-    for (int i = 0; i < 20; i++) {  //define every index from tab 
-        tab[i] = 5 + rand() % 150;
+    for (int i = 0; i < max; i++) {  //define every index from tab 
+        tab[i] = 5 + rand() % 10000;
     }
-    for (int i = 0; i < 20; i++) {  //write numbers from every tab index 
+    for (int i = 0; i < max; i++) {  //write numbers from every tab index 
         cout << " " << tab[i];
     }
     cout << endl;
 
 
-    int max = 20;                   //array size
+
     int tempNum;                    //temporary variable with number
     int right;                      //number from right side
     int left;                       //number from left side
@@ -44,7 +45,7 @@ int main()
 
 
 
-    for (int i = 0; i < 20; i++) {      //write sorted array
+    for (int i = 0; i < max; i++) {      //write sorted array
         cout << " " << tab[i];
     }
 }
